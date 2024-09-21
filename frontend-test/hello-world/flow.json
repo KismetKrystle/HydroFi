@@ -1,0 +1,82 @@
+{
+	"emulators": {
+	  "default": {
+		"port": 3569,
+		"serviceAccount": "emulator-account"
+	  }
+	},
+	"contracts": {
+	  "FungibleToken": {
+		"source": "./contracts/utility/FungibleToken.cdc",
+		"aliases": {
+		  "emulator": "0xee82856bf20e2aa6",
+		  "testnet": "0x9a0766d93b6608b7"
+		}
+	  },
+	  "NonFungibleToken": {
+		"source": "./contracts/utility/NonFungibleToken.cdc",
+		"aliases": {
+		  "emulator": "0xf8d6e0586b0a20c7",
+		  "testnet": "0x631e88ae7f1d7c20"
+		}
+	  },
+	  "MetadataViews": {
+		"source": "./contracts/utility/MetadataViews.cdc",
+		"aliases": {
+		  "emulator": "0xf8d6e0586b0a20c7",
+		  "testnet": "0x631e88ae7f1d7c20"
+		}
+	  },
+	  "HydroponicSystem": {
+		"source": "./contracts/HydroponicSystem.cdc",
+		"aliases": {
+		  "emulator": "0xf8d6e0586b0a20c7"
+		}
+	  },
+	  "PlantToken": {
+		"source": "./contracts/PlantToken.cdc",
+		"aliases": {
+		  "emulator": "0xf8d6e0586b0a20c7"
+		}
+	  },
+	  "HydroponicPiece": {
+		"source": "./contracts/HydroponicPiece.cdc",
+		"aliases": {
+		  "emulator": "0xf8d6e0586b0a20c7"
+		}
+	  },
+	  "Growbed": {
+		"source": "./contracts/Growbed.cdc",
+		"aliases": {
+		  "emulator": "0xf8d6e0586b0a20c7"
+		}
+	  }
+	},
+	"networks": {
+	  "emulator": "127.0.0.1:3569",
+	  "mainnet": "access.mainnet.nodes.onflow.org:9000",
+	  "testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+	  "emulator-account": {
+		"address": "f8d6e0586b0a20c7",
+		"key": "ba68d45a5acaa52f3cacf4ad3a64d9523e0ce0ae3addb1ee6805385b380b7646"
+	  }
+	},
+	"deployments": {
+	  "emulator": {
+		"emulator-account": [
+		  "FungibleToken",
+		  "NonFungibleToken",
+		  "MetadataViews",
+		  "HydroponicSystem",
+		  "PlantToken",
+		  "HydroponicPiece",
+		  "Growbed"
+		]
+	  }
+	},
+	"transactions": {
+		"mintGrowBed": "./transactions/mintGrowBed.cdc"
+	}
+  }
